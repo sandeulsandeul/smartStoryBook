@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic:400,700,800|Poor+Story|Varela+Round&subset=korean');
+html{
+    font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Poor Story', cursive;
+    font-family: 'Jua', sans-serif;
+}
+
+
+head{
+  width: 100%;
+  height: auto;
+  background: white;
+}
+body{
+  width: 100%;
+  height: auto;
+  background: white;
+  margin : 0 auto;
+}
+div.container{
+  float : left;
+  width: 100%;
+  height: auto;
+  margin : 0 auto;
+}
+footer{
+  clear:both;
+  width: 100%;
+  height: 120px;
+  background: white;
+}
+a:link , a:visited, a:hover  {
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+  font-style: Black;
+}
+ul, li{
+  list-style:none;
+}
+div {
+  margin: 10px;
+}
+nav.navg >ul >li {
+  float: left;
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+div#search_bar{
+  height: 300px;
+  display: table-cell;
+  vertical-align: middle;
+}
+div#search_bar> form{
+float: middle;
+}
+div.container> ul {
+  width: 100%;
+  margin: 10px;
+  min-height: 450px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.container> ul > div.Category {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  min-height: 450px;
+}
+
+
+div.container> ul:nth-child(odd) {
+background: #fabe00;
+}
+
+div.container>  ul:nth-child(even)  {
+background: white;
+}
+div.container> ul > div.Category >a {
+  width: auto;
+  height: auto;
+  min-height: 350px;
+}
+div.container > ul > div.Category>a >img.Category{
+  width: 40%;
+  float: left;
+  margin: 10px;
+}
+div.container > ul > div.Category> a >div.Categorytext{
+  width: 60%;
+  float: left;
+  margin-top: 10px;
+}
+
+div.container > ul > div.Category> a >div.Categorytext>h2{
+  font-family: 'Jua', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+div.container > ul > div.Category> a >div.Categorytext>p{
+font-family: 'Poor Story', cursive;
+font-weight: bold;
+font-size: 15px;
+}

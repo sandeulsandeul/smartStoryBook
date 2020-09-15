@@ -1,0 +1,20 @@
+div.payprocess {
+  text-align: left;
+  padding-top:15px;
+}
+
+div.payprocess li {
+  text-align: left;
+  text-decoration-color: gray;
+  list-style: none;
+  margin-right:10px;
+  float: left;
+}
+
+div.payprocess li.point {
+  text-align: left;
+  text-decoration-color: black;
+  list-style: none;
+  font-weight:bold;
+  float: left;
+}

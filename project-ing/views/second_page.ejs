@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="search_bar.css">
+<meta charset="utf-8">
+<head>
+<script type="text/javascript">
+ var stmnLEFT = 10; // 오른쪽 여백
+ var stmnGAP1 = 0; // 위쪽 여백
+ var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+ var stmnBASE = 150; // 스크롤 시작위치
+ var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+ var stmnScrollSpeed = 20; //스크롤 속도 (클수록 느림)
+ var stmnTimer;
+ function RefreshStaticMenu() {
+  var stmnStartPoint, stmnEndPoint;
+  stmnStartPoint = parseInt(document.getElementById('STATICMENU').style.top, 10);
+  stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2;
+  if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1;
+  if (stmnStartPoint != stmnEndPoint) {
+   stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 );
+   document.getElementById('STATICMENU').style.top = parseInt(document.getElementById('STATICMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px';
+   stmnRefreshTimer = stmnScrollSpeed;
+   }
+  stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed);
+  }
+ function InitializeStaticMenu() {
+  document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
+  document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px';
+  RefreshStaticMenu();
+  }
+</script>
+<style type="text/css">
+#STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
+</style>
+</head>
+
+<body onload="InitializeStaticMenu();">
+  <div id="STATICMENU">
+  <div class="recommend">
+    <div class="content">
+    </div>
+    <div class="left">
+      <dic class="menu">
+        <ul>
+          <div id="first">
+            <strong>1위</strong> 고양이가 그리워한 생쥐</div>
+          <div id="second"><strong>2위</strong> 동물나라의 디자이너 여우</div>
+            <div id="third"><strong>3위</strong> 콧수염 아저씨의 똥방귀 먹는 기계</div>
+            <div id="forth"><strong>4위</strong> 소곤소곤 설화모리</div>
+            <div id="fifth"><strong>5위</strong> 도깨비 시골집</div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div id="search_bar" align="center" style="margin-top:45px;">
+  <input type="text" placeholder="검색어 입력">
+  <button>검색<button>
+</div>
+  <div align="center">
+  <p style="margin-top:60px;">
+<img src=
+"http://image.yes24.com/momo/TopCate712/MidCate003/204845.jpg"
+width="300" height="370">
+<img src=
+"http://thesc.kr/gears_pds/editor/news-6e557fdc-a093-4ab7-84db-b16010b75b34/gho01-20180124.jpg"
+width="300" height="370">
+<img src=
+"https://i.pinimg.com/originals/a1/32/83/a132836f3407bfcd075545d4b8da7327.jpg"
+width="300" height="370">
+</p>
+<p>
+<a href="file:///D:/전세희/web/project_smart_player/package_screen4.html"
+target="_blank" title="new image">
+<img src=
+"http://file.gamedonga.co.kr/files/2015/03/31/gamedonga_20141208172303929.jpeg"
+width="300" height="370"></a>
+<img src=
+"http://www.gukjenews.com/news/photo/201503/217442_108736_3247.jpg"
+width="300" height="370">
+<img src=
+"https://misc.ridibooks.com/cover/805021358/xxlarge"
+width="300" height="370">
+</p>
+<p>
+<img src=
+"https://misc.ridibooks.com/cover/754007765/xxlarge"
+width="300" height="370">
+<img src=
+"http://archivenew.vop.co.kr/images/702813b44e7ff335aad3e5d0642c7a2c/2013-11/12012755_001.jpg"
+width="300" height="370">
+<img src=
+"http://bir.co.kr/wp-content/uploads/bookcover/%EB%8F%99%EB%AC%BC%EB%82%98%EB%9D%BC%EC%9D%98%EB%94%94%EC%9E%90%EC%9D%B4%EB%84%88%EC%97%AC%EC%9A%B0_%ED%91%9C%EC%A7%80%EC%9B%B9%EC%9A%A9-500x669.jpg"
+width="300" height="370">
+</p>
+</div>
+<nav aria-label="Page navigation example" align="center">
+  <ul class="pagination">
+    <class="page-item"><a class="page-link" href="#"><<</a>
+    <class="page-item"><a class="page-link"
+    href="file:///D:/전세희/web/project_smart_player/first_page.html">1</a>
+    <class="page-item"><a class="active" href="#">2</a>
+    <class="page-item"><a class="page-link" href="#">3</a>
+    <class="page-item"><a class="page-link" href="#">>></a>
+  </ul>
+</nav>
+</body>
+</html>

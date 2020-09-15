@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+  <head>
+    <title>Register Form</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/button.css"></link>
+  </head>
+  <body>
+    <div class="container">
+      <div class="register">
+        <h1>추가정보 입력</h1>
+        <form action="/register_step4" method="post">
+            <p>
+              <select name="child_old">
+                  <option value="3개월이하">3개월이하</option>
+                  <option value="4개월">4개월</option>
+                  <option value="5개월">5개월</option>
+                  <option value="6개월">6개월</option>
+                  <option value="7개월">7개월</option>
+                  <option value="8개월">8개월</option>
+                  <option value="9개월">9개월</option>
+                  <option value="10개월">10개월</option>
+                  <option value="11개월">11개월</option>
+                  <option value="12~24개월">12~24개월</option>
+                  <option value="25~36개월">25~36개월</option>
+                  <option value="37~48개월">37~48개월</option>
+                  <option value="5~7세">5~7세</option>
+                  <option value="8~9세">8~9세</option>
+                  <option value="10~13세">10~13세</option>
+                  <option value="14세이상">14세이상</option>
+                </select>
+            </p>
+            <p>
+                <input type="checkbox" name="favorite1" value="전래동화">전래동화
+                <input type="checkbox" name="favorite2" value="영어">영어
+                <input type="checkbox" name="favorite3" value="동물">동물
+                <input type="checkbox" name="favorite4" value="자장가">자장가
+            </p>
+            <p>
+                <input type="submit" class="btn_submit" style="margin:10px;">
+            </p>
+        </form>
+    </body>
+
+</html>

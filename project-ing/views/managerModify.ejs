@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  <!--navi -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Smart Fairy Book</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="/main">Home</a></li>
+        <li class=""><a href="#">About</a></li>
+        <li class=""><a href="/category/1">Category</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout" >logout</a></li>
+        <li><a href="/mypage">MyPage</a></li>
+      </ul>
+
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+  <body>
+    <!------------- MAIN PAGE CONTENT AREA --------->
+<div class="site-panel"style="margin-top:110px">
+  <div class="container">
+      <div class="row">
+              <div class="col-md-3 well">
+                  <div class= "sidebar">
+                      <div class="list-group">
+<a href="/manager/modify" class="list-group-item active">My Profile</a>
+<a href="#" class="list-group-item">My Wishlist </a>
+<a href="/mypage/download" class="list-group-item">My download </a>
+</div>
+                  </div>
+              </div>
+              <div class="col-md-9 ">
+                  <div class= "content-box well">
+                              <form class="form-horizontal marginT20">
+<fieldset>
+
+<!-- Form Name -->
+<legend>My Profile</legend>
+
+<!-- Name of Buyer input-->
+<div class="form-group">
+ <div class="col-md-6">
+  회사 이름
+<input id="name" name="username" value="<%=companyname %>"  class="form-control" required="" type="text" readonly>
+
+</div>
+ <div class="col-md-6">
+  관리자 이름
+<input id="name" name="name" value="<%=name %>" class="form-control" required="" type="text"readonly>
+
+</div>
+</div>
+
+
+<!-- Contact Info-->
+<div class="form-group">
+
+<div class="col-md-6">
+  E-mail:
+<input id="" name="email" value="<%=email %>" class="form-control" required="" type="text"readonly>
+</div>
+<div class="col-md-6">
+<input id="" name="phone_num" placeholder="<%=phone_num %>" class="form-control" required="" type="text">
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+<div class="col-md-6">
+
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-6">
+<a href="/mypage"> <button type = "button"  class="btn_cancel1" style="margin:10px;">확인</button></a>
+<a href="/mypage_modify"> <button type = "button"  class="btn_order" style="margin:10px;">수정</button></a>
+</div>
+</div>
+</fieldset>
+</form>
+
+                  </div>
+              </div>
+
+
+
+      </div>
+  </div>
+</div>
+
+  </body>
+</html>

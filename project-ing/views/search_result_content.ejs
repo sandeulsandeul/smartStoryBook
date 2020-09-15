@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="search_bar.css">
+<meta charset="utf-8">
+<head>
+<style type="text/css">
+#STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
+</style>
+
+  <style type="text/css">
+  input:-ms-input-placeholder {color:#a8a8a8;}
+  input::-webkit-input-placeholder {color:#a8a8a8;}
+  input::-moz-placeholder {color:#a8a8a8;}
+  </style>
+</head>
+
+<div style="margin-top:70px;">
+  <% for(var i = 0; i< content.length; i++){%>
+    <div><img src=<%=content[i].con_imge_filepath%>
+      width="200" align=left vspace=0 hspace=30 style="margin-left:300px;">
+      <p>
+        <%=content[i].con_name%></p>
+      <p style="margin-top:20px;">
+        가격 : <%=content[i].con_price%></p>
+    </div>
+    <div>
+      <button style="margin-top:30px;">바로 구매</button>
+      <button style="margin-top:30px;">장바구니</button>
+      <br clear=left>
+    </div>
+    <% }; %>
+  </div>
+
+
+</body>
+</html>

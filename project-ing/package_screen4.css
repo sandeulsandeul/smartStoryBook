@@ -1,0 +1,34 @@
+input:-ms-input-placeholder {color:#a8a8a8;}
+input::-webkit-input-placeholder {color:#a8a8a8;}
+input::-moz-placeholder {color:#a8a8a8;}
+
+head{
+  position: relative;
+}
+#top_bar{
+  height: 80px;
+  width: 100%;
+  background: #FFE400;
+  /*position: absolute;*/
+}
+.section_head{
+  font-size: 20px;
+}
+.detail_package{
+  font-size: 30px;
+}
+button {
+    width:200px;
+    height: 60px;
+    background-color: #FFE400;
+    border: none;
+    border-radius: 10px;
+    color:black;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px;
+    cursor: pointer;
+}

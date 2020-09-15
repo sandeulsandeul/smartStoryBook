@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="package_screen4.css">
+<meta charset="utf-8">
+<head>
+    <div id="top_bar" position=relative width=100% height=100px
+          style="margin-top:45px;">
+    </div>
+</head>
+<body>
+<div class="section_head" style="margin-left:300px;">
+  <h2>패키지 정보</h2>
+</div>
+
+<!---추가---->
+<% for(var i = 0; i< contents.length; i++){%>
+<p>
+  <img src=
+  <%=contents[i].con_imge_filepath%>
+  width="350" align=left vspace=0 hspace=30 style="margin-left:300px;">
+  <strong>><%=contents[i].con_name%></strong><br>
+  <p style="margin-top:50px;">가격 :
+    <style="margin-left:30px;"><u><strong><%=contents[i].con_price%></strong></u></style>
+  </p>
+<% }; %>
+<!---추가---->
+
+<style>
+dt { float: left; }
+</style>
+    <div class="big_thumb"style='line-height:200%'>
+      <dl class="detail_package">
+        <p style="margin-top:60px;">총 음악수
+          <span style="margin-left:20px;">30곡</span>
+        </p>
+        <button style="margin-top:30px;">바로 구매</button>
+        <button style="margin-top:30px;">장바구니</button>
+        <br clear=left>
+      </dl>
+    <div>
+</body>
+</html>

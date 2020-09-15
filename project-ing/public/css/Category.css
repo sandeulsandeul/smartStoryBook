@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic:400,700,800|Poor+Story|Varela+Round&subset=korean');
+
+#content{
+font-family: 'Nanum Gothic', sans-serif;
+font-weight: bold;
+}
+div.recommend{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: bold;
+}
+div.recommend>div.left{
+  margin: 10px;
+}
+div.recommend>div.left>ul{
+  margin-left: 5px;
+}
+button{
+font-family: 'Jua', sans-serif;
+font-weight: lighter;
+padding: 12px 28px;
+border-radius: 12px;
+border: 2px solid #4CAF50;
+background-color: white;
+}
+#search_bar > form > input {
+  font-family: 'Jua', sans-serif;
+  font-weight: lighter;
+  padding: 12px 28px;
+}
+
+#STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
+input:-ms-input-placeholder {color:#a8a8a8;}
+input::-webkit-input-placeholder {color:#a8a8a8;}
+input::-moz-placeholder {color:#a8a8a8;}
+.recommend{
+  border:2px solid #FAED7D;
+}
+#input_bar{
+  font-size: 16px;
+    height: 40px;
+    width: 600px;
+    border: 10px solid #FFE400;
+    background: #ffffff;
+    margin-left: 50px;
+  outline: none;
+}
+#button{
+  font-size: 20px;
+  width: 100px;
+  height: 60px;
+  border: 0px;
+  background: #FFE400;
+  outline: none;
+  color: black;
+}
+   #paging > ul {
+       list-style-type:none;
+       margin-left: 800px;
+  }
+   #paging > ul li {
+       font-size: 1.1em;
+       display:inline-block;
+       cursor:pointer;
+       padding: 0 3px;
+ }
+   #paging > ul > li:hover {
+       /*background: #fbfbfb;*/
+       /*font-weight:bold;*/
+       color: #0080ff;
+   }
+   #paging > ul > li.selected {
+       color: #0080ff;
+       font-size:1.2em;
+       font-weight:bold;
+       cursor:default;
+  }
+
+  /* The Modal (background) */
+         .modal {
+             display: none; /* Hidden by default */
+             position: fixed; /* Stay in place */
+             z-index: 1; /* Sit on top */
+             left: 0;
+             top: 0;
+             width: 100%; /* Full width */
+             height: 100%; /* Full height */
+             overflow: auto; /* Enable scroll if needed */
+             background-color: rgb(0,0,0); /* Fallback color */
+             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+         }
+
+         /* Modal Content/Box */
+         .modal-content {
+             background-color: #fefefe;
+             margin: 15% auto; /* 15% from the top and centered */
+             padding: 20px;
+             border: 1px solid #888;
+             width: 50%; /* Could be more or less, depending on screen size */
+
+         }
+
+         /* The Close Button */
+         .close {
+             color: #aaa;
+             float: right;
+             font-size: 28px;
+             font-weight: bold;
+         }
+
+         .close:hover,
+         .close:focus {
+             color: black;
+             text-decoration: none;
+             cursor: pointer;
+         }

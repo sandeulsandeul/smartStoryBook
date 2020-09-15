@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Smart fariy Tale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/category2.css">
+  <link rel="stylesheet" href="/css/Category.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type="/js/category.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+
+
+</head>
+<body>
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="/main">Smart fariy Tale</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+              <ul class="navbar-nav m-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/main">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/category/1">Category</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/cart">Cart</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0"action="/search_result" method="get"s>
+                  <div class="input-group input-group-sm">
+                    <form action="/search_result" method="get">
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." name="searchWord"  required="required">
+                      <div class="input-group-append">
+                          <input  type="submit" class="btn btn-secondary btn-number" value="Search">
+                          </input>
+                      </div>
+                    </form>
+                  </div>
+              </form>
+
+              <a class="btn btn-success btn-sm ml-3" href="/cart">
+                  <i class="fa fa-shopping-cart"></i> Cart
+                  <span class="badge badge-light"><%= cartnum %></span>
+              </a>
+          </div>
+      </div>
+  </nav>
+  <section class="jumbotron text-center">
+      <div class="container">
+          <h1 class="jumbotron-heading"> CATEGORY</h1>
+          <p class="lead text-muted mb-0">Travel through the book in a new world</p>
+      </div>
+  </section>
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="/main">Home</a></li>
+                      <li class="breadcrumb-item">Category</li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+  </div>
+  <div class="container" >
+      <div class="row">
+          <div class="col-12 col-sm-3">
+              <div class="card bg-light mb-3">
+                  <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categor</div>
+                  <ul class="list-group category_block">
+                      <li class="list-group-item"><a href="/Category/1">family</a></li>
+                      <li class="list-group-item"><a href="/Category/2">friend</a></li>
+                      <li class="list-group-item"><a href="/Category/3">Animal</a></li>
+                      <li class="list-group-item"><a href="/Category/4">Imagination</a></li>
+                  </ul>
+              </div>
+              <div class="card bg-light mb-3" >
+                  <div class="card-header bg-success text-white text-uppercase">Ranking</div>
+                    <div id="STATICMENU" style="margin-top:50px ; ">
+                      <div class="recommend">
+                        <div class="left">
+                            <ul style="padding-left: 5px;">
+                              <% for(var i = 0; i< contents.length; i++){%>
+                                <p><%=(i+1)%>위   <%=contents[i].con_name%></p>
+                                <% }; %>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="row">
+                <%if (content.length < 3 ){%>
+                  <% for(var i = 0; i< content.length; i++){%>
+                  <div class="col-12 col-md-6 col-lg-4">
+                      <div class="card">
+                          <img  class="card-img-top" alt="Card image cap" src=<%=content[i].con_imge_filepath%> >
+                          <div class="card-body">
+                              <h4 class="card-title"><a href="product.html" title="View Product"><%=content[i].con_name%></a></h4>
+                              <h4 class="card-title"><a href="product.html" title="View Product"><%=content[i].con_price%></a></h4>
+                              <div class="row">
+                                  <div class="col">
+                                       <a href="/buynow/add/<%=content[i].con_id %>" class="btn btn-danger btn-block">Buynow</a>
+                                  </div>
+
+                                  <div class="col">
+                                      <a href="/cart/add/<%=content[i].con_id%>/1" class="btn btn-success btn-block">Add to cart</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <% }; %>
+                  <%}else{%>
+                    <% for(var i = 0; i< 3; i++){%>
+                      <div class="col-12 col-md-6 col-lg-4">
+                          <div class="card">
+                              <img  class="card-img-top" alt="Card image cap" src=<%=content[i].con_imge_filepath%> >
+                              <div class="card-body">
+                                  <h4 class="card-title"><a href="product.html" title="View Product"><%=content[i].con_name%></a></h4>
+                                  <div class="row">
+                                      <div class="col">
+                                          <p class="btn btn-danger btn-block"><%=content[i].con_price%></p>
+                                      </div>
+                                      <div class="col">
+                                          <a href="/cart/add/<%=content[i].con_id%>/1" class="btn btn-success btn-block">Add to cart</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <% }; %>
+                      <%}%>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+
+</body>
+
+<!-- Footer -->
+<footer class="text-light" style="margin-top:200px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>About</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                  We use the smart keypad to help kids get interested in books and increase thier concentration
+                  by providing them with contents.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Informations</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">instagram</a></li>
+                    <li><a href="">blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contact</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i> My company</li>
+                    <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Back to top</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

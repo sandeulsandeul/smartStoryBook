@@ -1,0 +1,70 @@
+
+div.pay table.pay {
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+}
+div.pay table.pay thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid #036;
+    background: #fabe00;
+}
+div.pay table.pay tbody th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    text-align: center;
+    border-bottom: 1px solid #fdebb2;
+}
+div.pay table.pay td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+div.pay table tbody tr.totalprice {
+  background: #fdebb2
+}
+div.pay button.page_button{
+  background:#fabe00;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+div.pay button.page_button:hover{
+  background:#fff;
+  color:#fabe00;
+}
+div.pay button.page_button:before,div.pay button.page_button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background:#fabe00;
+  transition:400ms ease all;
+}
+div.pay button.page_button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+div.pay button.page_button:hover:before,button.page_button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/mypage.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  <!--navi -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Smart Fairy Book</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="/main">userpage</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/manager_logout" >logout</a></li>
+      </ul>
+
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+  <body>
+    <section class="jumbotron text-center">
+        <div class="container"style="margin-top:100px">
+            <h1 class="jumbotron-heading"> Manager page</h1>
+            <p class="lead text-muted mb-0">Tell us the story of your company</p>
+        </div>
+    </section>
+    <!------------- MAIN PAGE CONTENT AREA --------->
+<div class="site-panel"style="margin-top:110px">
+  <div class="container">
+      <div class="row">
+              <div class="col-md-3 well">
+                  <div class= "sidebar">
+                      <div class="list-group">
+<a href="/managerpage" class="list-group-item active">company Profile</a>
+<a href="/manager_Bookupdate"class="list-group-item"> Book update </a>
+</div>
+                  </div>
+              </div>
+                    <div class="col-md-9 ">
+                          <div class= "content-box well">
+                              <form class="form-horizontal marginT20" name="newContent" action="/manager_Booklist" method="post">
+                                <div class="form-group">
+                                  <div class="col-md-6">
+                                    <input id="name" name="con_name" placeholder="con_name"  class="form-control" required="" type="text">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <input id="name" name="con_id" placeholder="con_id" class="form-control" required="" type="text">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                   <div class="col-md-6">
+                                     <input id="name" name="cate_code" placeholder="cate_code" class="form-control" required="" type="text">
+                                   </div>
+                                   <div class="col-md-6">
+                                     <input id="" name="cate_kind" placeholder="cate_kind" class="form-control" required="" type="text">
+                                   </div>
+                                </div>
+                                <div class="form-group">
+                                   <div class="col-md-6">
+                                     <input id="name" name="con_imge_filesize" placeholder="con_imge_filesize" class="form-control" required="" type="text">
+                                   </div>
+                                   <div class="col-md-6">
+                                     <input id="" name="con_imge_filepath" placeholder="con_imge_filepath" class="form-control" required="" type="text">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                   <div class="col-md-6">
+                                     <input id="name" name="con_download" placeholder="con_download" class="form-control" required="" type="text">
+                                   </div>
+                                   <div class="col-md-6">
+                                     <input id="" name="con_price" placeholder="con_price" class="form-control" required="" type="text">
+                                   </div>
+                                   <div class="col-md-6">
+                                     <input id="" name="reg_date" placeholder="reg_date" class="form-control" required="" type="text">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-md-6">
+                                    <p>
+                                      <input type="submit" class="btn_submit" style="margin:10px;">
+                                    </p>
+                                  </div>
+                                </div>
+                              </form>
+                          </div>
+                    </div>
+
+                  </div>
+              </div>
+
+
+
+      </div>
+  </div>
+</div>
+
+  </body>
+
+  <!-- Footer -->
+  <footer class="text-light" style="margin-top:200px">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3 col-lg-4 col-xl-3">
+                  <h5>About</h5>
+                  <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                  <p class="mb-0">
+                    We use the smart keypad to help kids get interested in books and increase thier concentration
+                    by providing them with contents.
+                  </p>
+              </div>
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                  <h5>Informations</h5>
+                  <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                  <ul class="list-unstyled">
+                      <li><a href="">facebook</a></li>
+                      <li><a href="">instagram</a></li>
+                      <li><a href="">blog</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+
+              </div>
+
+              <div class="col-md-4 col-lg-3 col-xl-3">
+                  <h5>Contact</h5>
+                  <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                  <ul class="list-unstyled">
+                      <li><i class="fa fa-home mr-2"></i> My company</li>
+                      <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                  </ul>
+              </div>
+              <div class="col-12 copyright mt-3">
+                  <p class="float-left">
+                      <a href="#">Back to top</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </footer>
+</html>

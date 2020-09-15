@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/main.js">
+</script>
+
+   <!--navi -->
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand" href="#">Smart Fairy Book</a>
+     </div>
+     <div id="navbar" class="navbar-collapse collapse">
+       <ul class="nav navbar-nav">
+         <li class=""><a href="/main">Home</a></li>
+         <li class=""><a href="#">About</a></li>
+         <li class=""><a href="/category/1">Category</a></li>
+       </ul>
+       <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+             Sign In<span class="caret"></span>
+           </a>
+           <div class="dropdown-menu" id="formLogin">
+             <div class="row">
+               <div class="container-fluid">
+                 <form action="/login" method="post">
+                   <div class="form-group">
+                     <label>Username</label>
+                     <input class="form-control" name="username" id="username" type="text">
+                   </div>
+                   <div class="form-group">
+                     <label>Password</label>
+                     <input class="form-control" name="password" id="password" type="password"><br>
+                   </div>
+                   <div class="form-group">
+                     <label>Id remember </label>
+                     <input type="checkbox" name="remember_me" id="remember_me">
+                     <a href="/search">Forgot?</a>
+                   </div>
+                   <button type="submit" id="btnLogin" class="btn btn-success btn-sm">Login</button>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </li>
+        <li><a href="/register_step1">Register</a></li>
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+             manager<span class="caret"></span>
+           </a>
+           <div class="dropdown-menu" id="formLogin">
+             <div class="row">
+               <div class="container-fluid">
+                 <form action="/manager_login" method="post">
+                   <div class="form-group">
+                     <label>Username</label>
+                     <input class="form-control" name="username" id="username" type="text">
+                   </div>
+                   <div class="form-group">
+                     <label>Password</label>
+                     <input class="form-control" name="password" id="password" type="password"><br>
+                   </div>
+                   <button type="submit" id="btnLogin" class="btn btn-success btn-sm">Login</button>
+                   <button type="button" name="button" onclick="location.href='/manager_register_step1' "></button>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </li>
+       </ul>
+
+     </div><!--/.navbar-collapse -->
+   </div>
+ </nav>
+ <!--mainImage -->
+  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+     <!-- Overlay -->
+     <div class="overlay"></div>
+
+     <!-- Indicators -->
+     <ol class="carousel-indicators">
+       <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+       <li data-target="#bs-carousel" data-slide-to="1"></li>
+       <li data-target="#bs-carousel" data-slide-to="2"></li>
+     </ol>
+
+     <!-- Wrapper for slides -->
+     <div class="carousel-inner">
+       <div class="item slides active">
+         <div class="slide-1"></div>
+         <div class="hero">
+           <hgroup>
+               <h1>We are creative</h1>
+               <h3>Enjoy updated content</h3>
+           </hgroup>
+         </div>
+       </div>
+       <div class="item slides">
+         <div class="slide-2"></div>
+         <div class="hero">
+           <hgroup>
+               <h1>We are smart</h1>
+               <h3>Raise your concentration</h3>
+           </hgroup>
+         </div>
+       </div>
+       <div class="item slides">
+         <div class="slide-3"></div>
+         <div class="hero">
+           <hgroup>
+               <h1>We are amazing</h1>
+               <h3>Read the book with sound</h3>
+           </hgroup>
+         </div>
+       </div>
+     </div>
+    </div>
+</head>
+<body>
+
+    <div class="container">
+    	<div class="row">
+          <div id="custom-search-input" style="margin-top : 100px ">
+              <div class="input-group col-md-12">
+                <form class="" action="/search_result" method="get">
+                    <input type="text" class="  search-query form-control" placeholder="Search" name="searchWord"  required="required" style="height: 104px;width: 926px;">
+                    <span class="input-group-btn">
+                      <input type="submit" class="btn btn-danger" value="Search" style="height: 104px;width: 126px;">
+                        <span class=" glyphicon glyphicon-search"></span>
+                      </input>
+                    </span>
+                  </form>
+                </div>
+          </div>
+    	</div>
+    </div>
+
+<div class="how-section1">
+                  <a href="/Category/1">
+                    <div class="row">
+
+                      <div class="col-md-6 how-img">
+                          <img src="https://images-na.ssl-images-amazon.com/images/I/513TJ4KmrCL._SX258_BO1,204,203,200_.jpg" class="rounded-circle img-fluid" alt=""/>
+                  </div>
+                        <div class="col-md-6">
+                            <h4>family</h4>
+                                        <h4 class="subheading">My dad</h4>
+                                        <p class="text-muted">He’s all right my dad. My dad isn’t afraid of ANYTHING,
+                                                              Even the Big Bad Wolf. He can jump right over the moon. And walk on a tightrope (without falling off).
+                                                              He can wrestle with giants,  Or win the fathers’ race on sports day, easily.  He’s all right, my dad.</p>
+                        </div>
+                    </div>
+                  </a>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>friend</h4>
+                                        <h4 class="subheading">The Princess that Didn’t Eat Eggplants</h4>
+                                        <p class="text-muted">Princess Helena feels she has an incredibly troubled life. She has all the toys and clothes she could ever want, but she is incredibly sad.
+                                          One day, everything changes, when she goes through a hole in the royal fence, and meets Felicity.
+                                          Invited back to Felicity’s house, her family, not knowing who she is, welcome the princess, and give her a tasty meal of a new funny named food..</p>
+                        </div>
+
+                            <div class="col-md-6 how-img">
+                                 <img src="https://images.gr-assets.com/books/1375598823l/18281662.jpg" class="rounded-circle img-fluid" alt=""/>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 how-img">
+                            <img src="https://i.harperapps.com/covers/9780064400558/x400.jpg" class="rounded-circle img-fluid" alt=""/>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Animal</h4>
+                                        <h4 class="subheading">Charlotte's webs</h4>
+                        <p class="text-muted"> "If nothing happens, yes," she said. "Of course, they won't show up till next spring." Wilbur noticed that Charlotte's voice soundedsad."What makes you sound so down-hearted? I should think you'd
+                                                be terribly happy about this." "Oh, don't pay any attention to me," said Charlotte. "I just don't have much pep any more. I guess I feel sad because I won't ever see my children." </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Imagination</h4>
+                                        <h4 class="subheading">The Adventures of Pinocchio</h4>
+                                        <p class="text-muted">An old carpenter carves a little wooden puppet from a mysterious piece of wood that seems to have the ability to talk!
+                                          He begins to love the little creature like his own son and names him Pinocchio.
+                                          But the mischievous fellow runs away from his loving father as soon as he learns to walk. </p>
+                        </div>
+                        <div class="col-md-6 how-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/3/31/Adventures_of_pinocchio_ver1.jpg" class="rounded-circle img-fluid" alt=""/>
+                        </div>
+                    </div>
+                </div>
+</body>
+
+
+<!-- Footer -->
+<footer class="text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>About</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                  We use the smart keypad to help kids get interested in books and increase thier concentration
+                  by providing them with contents.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Informations</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">instagram</a></li>
+                    <li><a href="">blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contact</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i> My company</li>
+                    <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Back to top</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

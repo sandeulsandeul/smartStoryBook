@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="search_bar.css">
+<meta charset="utf-8">
+<head>
+<script type="text/javascript">
+ var stmnLEFT = 10; // 오른쪽 여백
+ var stmnGAP1 = 0; // 위쪽 여백
+ var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리
+ var stmnBASE = 150; // 스크롤 시작위치
+ var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+ var stmnScrollSpeed = 20; //스크롤 속도 (클수록 느림)
+ var stmnTimer;
+ function RefreshStaticMenu() {
+  var stmnStartPoint, stmnEndPoint;
+  stmnStartPoint = parseInt(document.getElementById('STATICMENU').style.top, 10);
+  stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2;
+  if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1;
+  if (stmnStartPoint != stmnEndPoint) {
+   stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 );
+   document.getElementById('STATICMENU').style.top = parseInt(document.getElementById('STATICMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px';
+   stmnRefreshTimer = stmnScrollSpeed;
+   }
+  stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed);
+  }
+ function InitializeStaticMenu() {
+  document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
+  document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px';
+  RefreshStaticMenu();
+  }
+</script>
+<style type="text/css">
+#STATICMENU { margin: 0pt; padding: 0pt;  position: absolute; right: 0px; top: 0px;}
+</style>
+</head>
+
+<body onload="InitializeStaticMenu();">
+      <div id="STATICMENU">
+      <div class="recommend">
+        <div class="content">
+        </div>
+        <div class="left">
+          <dic class="menu">
+            <ul>
+              <% for(var i = 0; i< contents.length; i++){%>
+              <p><%=(i+1)%>위   <%=contents[i].con_name%></p>
+              <% }; %>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+<div id="search_bar" align="center" style="margin-top:45px;">
+  <input type="text" placeholder="검색어 입력">
+  <button>검색<button>
+</div>
+  <style="margin: 0px">
+  <div align="center">
+  <p style="margin-top:60px;">
+<img src=
+"https://misc.ridibooks.com/cover/2234002162/xxlarge"
+width="300" height="370">
+<img src=
+"https://misc.ridibooks.com/cover/950000031/xxlarge"
+width="300" height="370">
+<img src=
+"https://misc.ridibooks.com/cover/2234002223/xxlarge"
+width="300" height="370">
+</p>
+<p>
+<a href="file:///D:/전세희/web/project_smart_player/package_screen4.html"
+target="_blank" title="new image">
+<img src=
+"https://misc.ridibooks.com/cover/805016511/xxlarge"
+width="300" height="370"></a>
+<img src=
+"https://misc.ridibooks.com/cover/805016643/xxlarge"
+width="300" height="370">
+<img src=
+"https://misc.ridibooks.com/cover/805017728/xxlarge"
+width="300" height="370">
+</p>
+<p>
+<img src=
+"http://www.anewsa.com/news_images/2009/07/06/mark/20090706175349.jpg"
+width="300" height="370">
+<img src=
+"https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F2138FA385306D24418311C"
+width="300" height="370">
+<img src=
+"http://www.ggilbo.com/news/photo/201512/258518_192182_1637.jpg"
+width="300" height="370">
+</p>
+</div>
+<nav aria-label="Page navigation example" align="center">
+  <ul class="pagination">
+    <class="page-item"><a class="page-link" href="#"><<</a>
+    <class="page-item"><a class="active"
+    href="file:///D:/전세희/web/project_smart_player/first_page.html">1</a>
+    <class="page-item"><a class="page-link"
+    href="file:///D:/전세희/web/project_smart_player/second_page.html">2</a>
+    <class="page-item"><a class="page-link" href="#">3</a>
+    <class="page-item"><a class="page-link" href="#">>></a>
+  </ul>
+</nav>
+
+
+</body>
+</html>

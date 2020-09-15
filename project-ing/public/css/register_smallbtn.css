@@ -1,0 +1,174 @@
+font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../../fonts/ubuntu/Ubuntu-Regular.ttf');
+}
+font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+body{
+  font: 13px/20px "Ubuntu-Regular", Tahoma, Verdana, sans-serif;
+  src: url('../../fonts/ubuntu/Ubuntu-Regular.ttf');
+  color: #404040;
+  background : white;
+}
+input [tpye=checkbox],
+input [type=radio]{
+border: 1px solid #7e82fa;
+margin: 0 0.1em 0 0;
+padding: 0;
+font-size: 16px;
+line-height :1em;
+width: 1.25em;
+height: 1.25em;
+background: #fff;
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed), to(#fbfbfb));
+-webkit-appearance: none;
+-webkit-box-shadow: 0px 1px 1px #fff;
+-webkit-border-radius: 0.25em;
+vertical-align: text-top;
+display: inline-block;
+}
+input[type=radio]{
+  -webkit-border-radius: 2em;
+}
+
+input [tpye=checkbox]:checked:after{
+  content:"✓";
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  height: 16px;
+  line-height: 18px;
+}
+
+input[type=radio]:checked:after{
+  content:"*";
+  display: block;
+  height: 16px;
+  line-height: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+select{
+  border:1px solid #D0D0D0;
+  background: url(http://www.quilor.com/i/select.png) no-repeat center, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fbfbfb), to(#ededed));
+  background: -moz-linear-gradient(19% 75% 90deg, #ededed, #fbfbfb);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0, .05);
+  -moz-box-shadow:  0 1px 2px rgba(0,0,0, .05);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0, .05);
+  color: #444;
+}
+.container{
+  margin: 50px auto;
+  width:640px;
+}
+.register_smallbtn{
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px, 20px;
+  width: 310px;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255,255,255,0.5), 0 1px 2px rgba(0, 0,0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0 ,0, 0.3);
+}
+
+.register_smallbtn.before{
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius:4px;
+}
+.register_smallbtn h1{
+  margin: -20px -20px, 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #6b687d;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0  1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+.register_smallbtn p{
+  margin: 20px 0 0;
+}
+.register_smallbtn p:first-child{
+  margin-top: 0;
+}
+.register_smallbtn input[type=text], .register_smallbtn input[type=email], .register_smallbtn input[type=password]{
+  width: 278px;
+}
+.register_smallbtn p.remember_me{
+  float: left;
+  line-height: 31px;
+}
+.register_smallbtn p.remember_me label{
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+.register_smallbtn p.remember_me input{
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.register_smallbtn p.forgot{
+  float: right;
+  line-height: 31px;
+  color: #acaafb;
+}
+
+
+
+
+
+:-moz-placeholder{
+  color: #848496 !important;
+  font-size: : 10px;
+}
+
+::-webkit-input-placeholder{
+  color: #848496;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+input{
+  font-family: 'Ubuntu-Regular', Tahoma, Verdana, sans-serif;
+  src: url('../../fonts/ubuntu/Ubuntu-Regular.ttf');
+  font-size: : 14px;
+}
+
+
+input[type=text], .register_smallbtn input[type=email], input[type=password]{
+  margin: px;
+  padding: 0 10px;
+  width: 278px;
+  height:34px;
+  color: #a6a4b1;
+  background: #e6e6e6;
+
+}
+input [type=text]:focus, .register_smallbtn input[type=email]:focus, input[type=password]:focus{
+  outline: none !important;
+  text-decoration: none;
+  color: #403866;
+}
+
+.li-ie9 input[type=text], .li-ie9 input[type=email], .li-ie9 input[type=password]{
+  line-height: 34px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+  <head>
+    <title>search_PW</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/button.css"></link>
+  </head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+  <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+    <body>
+      <div class="container">
+        <div class="register">
+        <h1>PW 찾기</h1>
+      <article>
+        <form action="search_PW" method="post">
+          <p>
+            ID:
+             <input type="text" name="username" required>
+          </p>
+          <p>
+            이름:
+            <input type="text" name="name"  required>
+          </p>
+          <p>
+            이메일:
+            <input type="text" name="email"  required>
+          </p>
+          <p>
+                  <a href="/search_ID"> <button type = "button"  class="btn_cancel1" style="margin:10px;">ID 찾기</button></a>
+          </p>
+
+          <p>
+            <input type="submit" value="이메일 인증" class="btn_cancel" style="margin:10px;">
+          </p>
+        </form>
+      </article>
+
+    </body>
+  </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+  <head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css"></link>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <h1>LOGIN</h1>
+        <form action="/login" method="post">
+          <p> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Player_%28logo1%29.jpg" width="100" height="40" style="margin-left:100px;" >
+          </p>
+
+          <table>
+            <tr>
+                 <td> <input type="text" name="username" placeholder="ID"></td>
+                 <td rowspan="2"><input type="submit" name="commit" value="로그인"></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+          </table>
+            <p class="remember_me">
+                <label>
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                      아이디 저장
+                </label>
+                  <a href="/register_step1"style="margin-left:80px;">회원가입</a>
+                  /
+                  <a href="/search">Forgot?</a>
+                  __________________OR___________________
+                  <img src="http://jamesinvest.co.kr/img/naverLogin.png" width="240" height="40" align="center" >
+               </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
